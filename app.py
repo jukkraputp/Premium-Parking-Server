@@ -10,8 +10,8 @@ def hello():
 @app.route('/api/v1/users', methods=['GET'])
 def get_users():
     col_ref = db.collection(u'Users')
-    datas = col_ref.stream()
-    if datas.exists:
-        return datas
-    else:
-        return 'Users not found', 404
+    docs = col_ref.stream()
+    data = []
+    for doc in docs:
+        data.append(doc.to_dict())
+    return data
