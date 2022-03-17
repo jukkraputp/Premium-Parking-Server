@@ -8,9 +8,9 @@ def hello():
     return 'Hello, World!'
 
 @app.route('/api/v1/users', methods=['GET'])
-def users():
+def get_users():
     col_ref = db.collection(u'Users')
-    datas = col_ref.get()
+    datas = col_ref.stream()
     if datas.exists:
         return datas
     else:
