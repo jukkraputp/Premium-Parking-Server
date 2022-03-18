@@ -1,5 +1,7 @@
-import datetime 
+import datetime
+import json 
 from flask import Flask, request
+from httplib2 import Response
 from db import db
 
 month_table = {
@@ -50,7 +52,7 @@ def get_users():
     data = []
     for doc in docs:
         data.append(doc.to_dict())
-    return data
+    return json.dumps(data)
 
 @app.route('/api/v1/user/<username>', methods=['GET'])
 def get_user(username):
@@ -69,3 +71,5 @@ def adjust_free_park_slots(slot):
     })
     return
         
+if __name__ == '__main__':
+    app.run(debug=True)
