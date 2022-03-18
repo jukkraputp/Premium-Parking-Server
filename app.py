@@ -5,7 +5,7 @@ import datetime
 
 cred = credentials.Certificate("embeddedfinalproject-firebase-adminsdk-d7rzl-1a47276dbc.json")
 firebase_admin.initialize_app(cred)
-Months = {
+month_table = {
         '01':"Jan",
         '02':"Feb",
         '03':"Mar",
@@ -36,14 +36,14 @@ app = Flask(__name__)
 
 #     return 'Hello, World!'
 
-@app.route('/rfid', methods=['POST', 'GET'])
+@app.route('/check_in', methods=['GET'])
 def check_in():
     can_check_in = 0
     current_time = datetime.datetime.now() 
     str_time = format(current_time)
-    year, mon, day = str_time.split()[0].split("-")
+    year, month_index, day = str_time.split()[0].split("-")
     current_hour = str_time.split()[1].split(":")[0]
-    search_time = day + " " + Months[mon] + " " + year + " " + current_hour
+    search_time = day + " " + month_table[month_index] + " " + year + " " + current_hour
     doc_ref = db.collection(u'RFID').document(search_time)
     
     user_rfid = request.args.get('RFID')
