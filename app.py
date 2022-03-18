@@ -64,12 +64,14 @@ def get_user(username):
         return 'User not found!', 404
 
 @app.route('/api/v1/free-park', methods=['POST'])
-def adjust_free_park_slots(slot):
-    doc_ref = db.collection(u'FreePark').document('Slot' + request.form['slot'])
-    doc_ref.set(db, {
-        'available': request.form['value']
+def adjust_free_park_slots():
+    data = request.get_json()
+    doc_ref = db.collection(u'FreePark').document('Slot' + str(data['slot']))
+    doc_ref.set({
+        'available': data['value']
     })
-    return
+    print(data)
+    return 'Success', 200
         
 if __name__ == '__main__':
     app.run(debug=True)
