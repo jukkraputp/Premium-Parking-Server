@@ -51,3 +51,21 @@ def get_users():
     for doc in docs:
         data.append(doc.to_dict())
     return data
+
+@app.route('/api/v1/user/<username>', methods=['GET'])
+def get_user(username):
+    doc_ref = db.collection(u'Users').document(username)
+    doc = doc_ref.get()
+    if doc.exists:
+        return doc.to_dict()
+    else:
+        return 'User not found!', 404
+
+@app.route('/api/v1/free-park', methods=['POST'])
+def adjust_free_park_slots(slot):
+    doc_ref = db.collection(u'FreePark').document('Slot' + request.form['slot'])
+    doc_ref.set(db, {
+        'available': request.form['value']
+    })
+    return
+        
