@@ -1,10 +1,7 @@
-from flask import Flask, request
-import firebase_admin
-from firebase_admin import credentials, firestore
 import datetime 
+from flask import Flask
+from db import db
 
-cred = credentials.Certificate("embeddedfinalproject-firebase-adminsdk-d7rzl-1a47276dbc.json")
-firebase_admin.initialize_app(cred)
 month_table = {
         '01':"Jan",
         '02':"Feb",
@@ -20,21 +17,7 @@ month_table = {
         '12':"Dec",
             }
 
-db = firestore.client()
-
 app = Flask(__name__)
-
-# @app.route('/')
-# def hello():
-#     doc_ref = db.collection(u'llll').document(u'olol')
-# # doc_ref = db.collection(u'RFID').document(u'16 Mar 2022 16')
-#     doc_ref.set({
-#         u'first': u'test',
-#         u'last': u'Lovelace',
-#         u'born': 1815
-#     })
-
-#     return 'Hello, World!'
 
 @app.route('/check_in', methods=['GET'])
 def check_in():
@@ -55,3 +38,16 @@ def check_in():
                 can_check_in = 1
 
     return format(can_check_in)
+
+@app.route('/')
+def hello():
+    return 'Hello, World!'
+
+@app.route('/api/v1/users', methods=['GET'])
+def get_users():
+    col_ref = db.collection(u'Users')
+    docs = col_ref.stream()
+    data = []
+    for doc in docs:
+        data.append(doc.to_dict())
+    return data
