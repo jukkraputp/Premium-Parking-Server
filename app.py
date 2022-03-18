@@ -1,7 +1,6 @@
 import datetime
 import json 
 from flask import Flask, request
-from httplib2 import Response
 from db import db
 
 month_table = {
@@ -21,7 +20,7 @@ month_table = {
 
 app = Flask(__name__)
 
-@app.route('/check_in', methods=['GET'])
+@app.route('/check_in', methods=['GET']) #OK
 def check_in():
     can_check_in = 0
     current_time = datetime.datetime.now() 
@@ -45,7 +44,7 @@ def check_in():
 def hello():
     return 'Hello, World!'
 
-@app.route('/api/v1/users', methods=['GET'])
+@app.route('/api/v1/users', methods=['GET']) #OK
 def get_users():
     col_ref = db.collection(u'Users')
     docs = col_ref.stream()
@@ -54,7 +53,7 @@ def get_users():
         data.append(doc.to_dict())
     return json.dumps(data)
 
-@app.route('/api/v1/user/<username>', methods=['GET'])
+@app.route('/api/v1/user/<username>', methods=['GET']) #OK
 def get_user(username):
     doc_ref = db.collection(u'Users').document(username)
     doc = doc_ref.get()
@@ -63,7 +62,7 @@ def get_user(username):
     else:
         return 'User not found!', 404
 
-@app.route('/api/v1/free-park', methods=['POST'])
+@app.route('/api/v1/free-park', methods=['POST']) #OK
 def adjust_free_park_slots():
     data = request.get_json()
     doc_ref = db.collection(u'FreePark').document('Slot' + str(data['slot']))
