@@ -3,20 +3,20 @@ import json
 from flask import Flask, request
 from db import db
 
-month_table = {
-    '01': "Jan",
-    '02': "Feb",
-    '03': "Mar",
-    '04': "Apr",
-    '05': "May",
-    '06': "Jun",
-    '07': "Jul",
-    '08': "Aug",
-    '09': "Sep",
-    '10': "Oct",
-    '11': "Nov",
-    '12': "Dec",
-}
+month_table = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+]
 
 app = Flask(__name__)
 
@@ -26,10 +26,10 @@ def check_in():
     can_check_in = 0
     current_time = datetime.utcnow() + timedelta(hours=7)
     str_time = format(current_time)
-    year = current_time.year
-    month = month_table[current_time.month - 1]
-    day = current_time.day
-    hour = current_time.hour
+    year = str(current_time.year)
+    month = month_table[int(current_time.month) - 1]
+    day = str(current_time.day)
+    hour = str(current_time.hour)
     search_time = day + " " + month + " " + year + " " + hour
     doc_ref = db.collection(u'RFID').document(search_time)
 
