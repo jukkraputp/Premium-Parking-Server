@@ -45,4 +45,4 @@ This project is part of the course Embeded System 01204322 in Computer Engineeri
 |Boonsak Surisarn       | 6210503683 |
 |Nopparuj Sirirojanakorn| 6210503632 |
 
-![Main pic](https://cdn.discordapp.com/attachments/915420724234174544/961904458692960286/unknown.png)
+![Main pic](https://cdn.discordapp.com/attachments/915420724234174544/961905017294581820/Screenshot_2022-03-26_195240.jpg)
