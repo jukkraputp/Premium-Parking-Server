@@ -1,0 +1,16 @@
+*{
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: rgb(1,33,71);
+  height: 100vh;
+  background: linear-gradient(9deg, rgba(1,33,71,1) 0%, rgba(63,250,238,1) 100%); */
+  
+}

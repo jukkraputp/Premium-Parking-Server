@@ -1,0 +1,152 @@
+.left-block{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background: rgb(255,255,255);
+background: linear-gradient(171deg, rgba(255,255,255,1) 0%, rgba(203,225,250,1) 36%);
+    margin-top: 40px;
+    /* margin-right: 10px; */
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: rgb(0 0 0 / 22%) 0px 1px 3px 2px;
+}
+
+.DateAndTime{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    color:white;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 17px;
+    gap: 20px;
+}
+
+.DateAndTime p{
+    text-shadow: 2px 2px #25252531;
+}
+
+.vip-parking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 70px;
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.vip-parking-header{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -15px;
+    color: white;
+    background-color: #726cf8;
+    background-image: linear-gradient(315deg, #726cf8 0%, #e975a8 74%);
+
+    border-radius: 20px;
+    box-shadow: 0px 1px 4px 0px #00000069;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+.vip-parking-header h2{
+    font-size: 23px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.vip-parking-available{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #500658;
+}
+
+.vip-parking-available h3{
+    font-size: 45px;
+}
+.vip-parking-available p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.free-parking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    width: 80%;
+    color:rgb(0, 0, 0);
+    background-color: white;
+    /* background-color: rgb(236, 236, 236); */
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.free-parking-header{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -15px;
+    color: white;
+    background-color: #726cf8;
+    background-image: linear-gradient(315deg, #726cf8 0%, #e975a8 74%);
+
+    border-radius: 20px;
+    box-shadow: 0px 1px 4px 0px #00000069;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+.free-parking-header h2{
+    font-size: 23px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.free-parking-available{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #500658;
+}
+
+.free-parking-available h3{
+    font-size: 45px;
+}
+.free-parking-available p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1045px) {
+    .DateAndTime{
+        padding-top:30px;
+    }
+    
+}
+

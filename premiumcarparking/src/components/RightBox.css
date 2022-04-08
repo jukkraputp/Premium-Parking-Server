@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+.right-block{
+    width: 44rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding-bottom: 30px;
+    background: rgb(255,255,255);
+background: linear-gradient(171deg, rgba(255,255,255,1) 0%, rgba(203,225,250,1) 36%);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 16px;
+    /* margin-left: 50px; */
+}
+@media only screen and (max-width: 1045px) {
+    .right-block{
+        width: 100%;
+        max-width: 44rem;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .ReservedAvailable{
+        margin-bottom: 50px;
+    }
+  }
+
+.right-block-header{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    text-shadow: 2px 2px #25252531;
+    box-shadow: 0px 1px 3px 0px rgba(58, 57, 57, 0.712);
+    color: white;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.RowIn-right-block{
+    margin-top: 40px;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.VIPReservedAvailable{
+    width: 250px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    color: white;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+@media only screen and (max-width: 621px){
+    .VIPReservedAvailable{
+        margin-top:0;
+    }
+}
+
+.VIPReservedAvailable h4{
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.Reserved-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+.Reserved-details p{
+    margin-bottom: 0;
+}
+
+.ReservedAvailable{
+    margin-top: 20px;
+    /* background-color: rgb(61, 207, 251); */
+    margin-bottom: 30px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 15px;
+    color: #500658;
+    background-color: whitesmoke;
+    /* box-shadow: 0px 1px 3px 1px rgba(65, 63, 63, 0.596); */
+    
+}
+.ReservedAvailable p{
+    font-size: 50px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.DateAndTimeForReserved{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgb(236, 236, 236); */
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0px 4px 5px 1px #0000003b;
+    padding: 20px;
+    margin-left: 5px;
+}
+
+.DateForReserved{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.DateForReserved h4{
+    margin-right: 5px;
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+.row-container{
+    width: 280px;
+    height: 220px;
+}
+
+@media only screen and (max-width: 621px){
+    .DateAndTimeForReserved{
+        margin-top: 30px;
+    }
+}
+
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 100%;
+    background-color: transparent !important;
+  }
+
+  .swiper-button-next::after {
+ 
+    font-size: 20px !important;
+    color: rgb(2, 2, 44) !important;
+    background-color: aliceblue;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right:15px;
+    padding-bottom: 10px;
+
+    box-shadow: rgb(0 0 0 / 22%) 0px 1px 7px 1px;
+    border-radius: 150px;
+  }
+  
+  .swiper-button-prev::after{
+    font-size: 20px !important;
+    color: rgb(2, 2, 44) !important;
+    background-color: aliceblue;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right:15px;
+    padding-bottom: 10px;
+
+    box-shadow: rgb(0 0 0 / 22%) 0px 1px 7px 1px;
+    border-radius: 150px;
+  }
+.swiper-pagination-bullet-active{
+    background-color: #7f5a83 ;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%) !important;
+}
+
+.timeForReserved{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeForReserved h4{
+    font-size: 20px;
+
+}
+
+.time-optional{
+    display: flex;
+    margin-top: 15px;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-optional p{
+    margin-bottom: 0;
+}
+
+
+.dropdown-menu {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown-item.active, .dropdown-item:active{
+    background-color: #0da9fd !important;
+}
+
+.dropdown-item:hover{
+    cursor: pointer;
+}
+
+.booking-button{
+    border-radius: 20px !important;
+    background-color: #726cf8;
+    background-image: linear-gradient(315deg, #726cf8 0%, #e975a8 74%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+
+.booking-button p{
+    margin-bottom: 0;
+    margin-left: 8px;
+}
+
+.booking-button:hover{
+    color: rgb(0, 34, 70) !important;
+}
+
+.cancel-button{
+    border-radius: 20px !important;
+    background-color: #3f0d12;
+    background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+}
+
+.cancel-button p{
+    margin-bottom: 0;
+    margin-left: 8px;
+}
+
+.cancel-button:hover{
+    color: rgb(0, 34, 70) !important;
+}
