@@ -4,7 +4,7 @@
 
 Front-end ของเว็บไซต์ใช้ react ในการเขียนและประกอบ 2 pages คือหน้า Home และ Login โดยจะเป็นระบบการจองคิวโดยให้สมาชิกจองคิว
 และเวลาผ่านทางเว็บไซต์ และ RIFD Tag ของลูกค้าก็จะเข้าไปในระบบและลูกค้าจะสามารถแสกนผ่าน Sensor ได้ในเวลาที่ลูกค้าจองไว้
-
+website: https://premiumparking-snapper.netlify.app/
 ## Back-end
 
 Back-end ทางเราใช้ python ในการเขียนโดยผ่าน flask และใช้ firebas_admin เพื่อใช้ในการติดต่อกับ Database 
