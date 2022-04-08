@@ -33,8 +33,8 @@ Database and Storage: Firebase
 
 This project is part of the course Embeded System 01204322 in Computer Engineering Faculty of Engineering Kasetsart University
 
--Project Link: <https://github.com/jukkraputp/Premium-Parking-Server>
--Present Link: <https://youtu.be/G0xv5Qx5HtM>
+- Project Link: <https://github.com/jukkraputp/Premium-Parking-Server>
+- Present Link: <https://youtu.be/G0xv5Qx5HtM>
 
 |                       |            |
 | ----------------------| ---------- |
