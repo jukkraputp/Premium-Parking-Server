@@ -44,3 +44,5 @@ This project is part of the course Embeded System 01204322 in Computer Engineeri
 |Kuntapong Preedipan    | 6210500099 |
 |Boonsak Surisarn       | 6210503683 |
 |Nopparuj Sirirojanakorn| 6210503632 |
+
+![Main pic](https://cdn.discordapp.com/attachments/915420724234174544/961904458692960286/unknown.png)
